@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="WishlistView" customModule="KSI_Task" customModuleProvider="target">
+            <connections>
+                <outlet property="activityIndicator" destination="tf4-wF-87L" id="x6b-zq-z6a"/>
+                <outlet property="productsCountLabel" destination="hOG-tE-rbi" id="SAG-sT-2w7"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+                <outlet property="wishlistTableView" destination="Yx1-cR-k7D" id="h3H-1Y-yuY"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="Yx1-cR-k7D">
+                    <rect key="frame" x="0.0" y="139" width="393" height="679"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                </tableView>
+                <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="tf4-wF-87L">
+                    <rect key="frame" x="178" y="407.66666666666669" width="37" height="37"/>
+                    <color key="color" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </activityIndicatorView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tqf-Zl-Ru6">
+                    <rect key="frame" x="0.0" y="59" width="393" height="80"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Wishlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5fe-OD-RwV">
+                            <rect key="frame" x="16" y="8" width="120" height="39"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="32"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hOG-tE-rbi">
+                            <rect key="frame" x="16" y="51" width="0.0" height="0.0"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="80" id="2Uz-3s-c3l"/>
+                        <constraint firstItem="hOG-tE-rbi" firstAttribute="leading" secondItem="5fe-OD-RwV" secondAttribute="leading" id="FC2-TM-KEc"/>
+                        <constraint firstItem="hOG-tE-rbi" firstAttribute="top" secondItem="5fe-OD-RwV" secondAttribute="bottom" constant="4" id="ldQ-Yd-ceT"/>
+                        <constraint firstItem="5fe-OD-RwV" firstAttribute="leading" secondItem="tqf-Zl-Ru6" secondAttribute="leading" constant="16" id="teu-kv-cY3"/>
+                        <constraint firstItem="5fe-OD-RwV" firstAttribute="top" secondItem="tqf-Zl-Ru6" secondAttribute="top" constant="8" id="ynb-Hy-OYb"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" red="0.95686274509803915" green="0.95686274509803915" blue="0.95686274509803915" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Yx1-cR-k7D" firstAttribute="top" secondItem="tqf-Zl-Ru6" secondAttribute="bottom" id="JU3-ca-15r"/>
+                <constraint firstItem="tf4-wF-87L" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Mj2-Zn-BlC"/>
+                <constraint firstItem="tqf-Zl-Ru6" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="TeV-rB-MYn"/>
+                <constraint firstItem="tqf-Zl-Ru6" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="ZCU-7h-Wt4"/>
+                <constraint firstItem="Yx1-cR-k7D" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="cqK-fP-08f"/>
+                <constraint firstItem="tf4-wF-87L" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="fbC-IU-6la"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="tqf-Zl-Ru6" secondAttribute="trailing" id="fvP-3j-lyF"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="Yx1-cR-k7D" secondAttribute="trailing" id="mrd-Uc-R0W"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="Yx1-cR-k7D" secondAttribute="bottom" id="qCz-Yt-LXD"/>
+            </constraints>
+            <point key="canvasLocation" x="81.679389312977094" y="19.718309859154932"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
